@@ -9,7 +9,8 @@ export default function ProductList() {
     let productService = new ProductService();
     productService
       .getProducts()
-      .then((result) => setProducts(result.data.data));
+      .then((result) => setProducts(result.data.data),
+      []);
   });
 
   return (
